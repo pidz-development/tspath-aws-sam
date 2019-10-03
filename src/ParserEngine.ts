@@ -145,6 +145,13 @@ export class ParserEngine {
                     relativePath = pathPrefix + relativePath;
                 }
 
+                if(this.args.absPath) {
+                    relativePath = relativePath.replace(/^(?:\.\.\/)+/, '');
+                    if (relativePath[0] !== path.sep) {
+                        relativePath = path.sep + relativePath;
+                    }
+                }
+                console.log(relativePath);
                 jsRequire = relativePath;
                 break;
             }
