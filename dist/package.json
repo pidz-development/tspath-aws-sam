@@ -1,6 +1,6 @@
 {
   "name": "tspath-aws-sam",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "TypeScript Path Igniter resolves @paths specified in tsconfig",
   "scripts": {
     "build": "NODE_ENV=production tsc && cp package.json dist/",
@@ -12,7 +12,7 @@
   "types": "dist/index.d.ts",
   "prepublish": "NODE_ENV=production tsc",
   "files": [
-    "dist/"
+    "./dist"
   ],
   "bin": {
     "tspath": "./dist/index.js"

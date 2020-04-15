@@ -12,7 +12,7 @@
   "types": "dist/index.d.ts",
   "prepublish": "NODE_ENV=production tsc",
   "files": [
-    "dist/"
+    "./dist"
   ],
   "bin": {
     "tspath": "./dist/index.js"
