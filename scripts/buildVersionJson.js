@@ -5,6 +5,6 @@ const packageContent = fs.readFileSync(process.cwd() + '/package.json');
 
 const json = fs.readFileSync(pathFrom);
 const content = JSON.parse(json);
-console.log(content);
 content.version = JSON.parse(packageContent).version;
+console.info('Added version.json', content);
 fs.writeFileSync(pathTo, JSON.stringify(content, null, 2));
