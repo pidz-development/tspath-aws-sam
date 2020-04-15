@@ -8,6 +8,9 @@
     "test": "yarn tspath --root tests",
     "watch": "tsc -w"
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "prepublish": "NODE_ENV=production tsc",
   "files": [
     "dist/"
   ],
