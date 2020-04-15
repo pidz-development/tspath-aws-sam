@@ -8,6 +8,9 @@
     "test": "yarn tspath --root tests",
     "watch": "tsc -w"
   },
+  "files": [
+    "dist/"
+  ],
   "bin": {
     "tspath": "./dist/index.js"
   },

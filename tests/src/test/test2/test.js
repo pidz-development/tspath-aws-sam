@@ -7,3 +7,12 @@ const type_definitions_1 = require("@src/type-definitions");
 const esprima = require("@test/esprima");
 const chalk_1 = require("@lib/chalk");
 const escodegen = require("@src/escodegen");
+
+
+const func = () => {
+    return true;
+};
+
+const one = { count: 3 };
+const two = { size: 3 };
+const mergedObj = { ...one, ...two };
