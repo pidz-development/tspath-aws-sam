@@ -3,10 +3,11 @@
   "version": "2.1.0",
   "description": "TypeScript Path Igniter resolves @paths specified in tsconfig",
   "scripts": {
-    "build": "NODE_ENV=production tsc && cp package.json ./dist/package.json",
+    "build": "NODE_ENV=production tsc",
     "tspath": "NODE_ENV=dev node ./dist/index.js",
     "test": "yarn tspath --root tests",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "publish:patch": "npm version patch && node scripts/buildVersionJson.js"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

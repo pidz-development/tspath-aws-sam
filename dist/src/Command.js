@@ -30,7 +30,7 @@ const ParserEngine_1 = require("./ParserEngine");
 const ConfigFinder_1 = require("./ConfigFinder");
 const chalk_1 = require("chalk");
 // @ts-ignore
-const package_json_1 = require("../package.json");
+const version_json_1 = require("./version.json");
 /**
  * TSPath main class
  */
@@ -39,7 +39,7 @@ class Command {
      * TSPath constructor, logs version
      */
     constructor() {
-        console.log(chalk_1.default.yellow('TSPath ' + package_json_1.version));
+        console.log(chalk_1.default.yellow('TSPath ' + version_json_1.version));
     }
     /**
      * Execute command

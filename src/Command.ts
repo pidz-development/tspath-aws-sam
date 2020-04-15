@@ -31,7 +31,7 @@ import { ConfigFinder } from './ConfigFinder';
 import chalk from 'chalk';
 import { ConfigFile } from './lib/ConfigFile';
 // @ts-ignore
-import { version } from '../package.json';
+import { version } from './version.json';
 import { Arguments } from './lib/Arguments';
 
 /**
@@ -79,5 +79,5 @@ export class Command {
                     }
                 });
         }
-  }
+    }
 }
