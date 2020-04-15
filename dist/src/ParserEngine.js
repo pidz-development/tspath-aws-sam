@@ -27,7 +27,8 @@ const fs = require("fs");
 const path = require("path");
 const utils_1 = require("./utils");
 const constants_1 = require("./lib/constants");
-const esprima = require("esprima");
+// tslint:disable-next-line:no-var-requires
+const espree = require('espree');
 const chalk_1 = require("chalk");
 const escodegen = require("escodegen");
 const PathResolver_1 = require("./lib/PathResolver");
@@ -162,8 +163,7 @@ class ParserEngine {
         const inputSourceCode = fs.readFileSync(filename, constants_1.FILE_ENCODING);
         let ast = null;
         try {
-            // @ts-ignore
-            ast = esprima.parse(inputSourceCode); // , { raw: true, tokens: true, range: true, comment: true });
+            ast = espree.parse(inputSourceCode); // , { raw: true, tokens: true, range: true, comment: true });
         }
         catch (error) {
             console.log('Unable to parse file:', filename);

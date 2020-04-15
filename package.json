@@ -39,6 +39,6 @@
     "@types/yargs": "^13.0.3",
     "tslint": "^5.18.0",
     "tslint-eslint-rules": "^5.4.0",
-    "typescript": "^2.4.2"
+    "typescript": "^3.8.3"
   }
 }

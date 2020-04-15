@@ -1,6 +1,6 @@
 {
   "name": "tspath-aws-sam",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "TypeScript Path Igniter resolves @paths specified in tsconfig",
   "scripts": {
     "build": "NODE_ENV=production tsc && cp package.json dist/",
@@ -28,7 +28,7 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "escodegen": "^1.12.0",
-    "esprima": "^4.0.1",
+    "espree": "^6.2.1",
     "prompt-confirm": "^2.0.4",
     "yargs": "^14.0.0"
   },
@@ -39,6 +39,6 @@
     "@types/yargs": "^13.0.3",
     "tslint": "^5.18.0",
     "tslint-eslint-rules": "^5.4.0",
-    "typescript": "^2.4.2"
+    "typescript": "^3.8.3"
   }
 }

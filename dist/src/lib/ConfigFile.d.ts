@@ -22,13 +22,13 @@ export declare class ConfigFile {
     /**
      * Path getter
      */
-    readonly path: string;
+    get path(): string;
     /**
      * FileName getter
      */
-    readonly fileName: string;
+    get fileName(): string;
     /**
      * ProjectOptions getter
      */
-    readonly projectOptions: ProjectOptions;
+    get projectOptions(): ProjectOptions;
 }

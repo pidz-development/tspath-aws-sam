@@ -13,9 +13,9 @@ export declare class PathResolver {
     /**
      * ProjectRoot getter
      */
-    readonly projectRoot: string;
+    get projectRoot(): string;
     /**
      * Dist root getter
      */
-    readonly distRoot: string;
+    get distRoot(): string;
 }
