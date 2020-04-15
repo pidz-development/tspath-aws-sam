@@ -1,6 +1,6 @@
 {
   "name": "tspath-aws-sam",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "TypeScript Path Igniter resolves @paths specified in tsconfig",
   "scripts": {
     "build": "NODE_ENV=production tsc",
