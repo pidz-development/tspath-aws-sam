@@ -197,7 +197,9 @@ export class ParserEngine {
         let ast = null;
 
         try {
-            ast = espree.parse(inputSourceCode); // , { raw: true, tokens: true, range: true, comment: true });
+            ast = espree.parse(inputSourceCode, {
+                ecmaVersion: 6,
+            }); // , { raw: true, tokens: true, range: true, comment: true });
         } catch (error) {
             console.log('Unable to parse file:', filename);
             console.log('Error:', error);

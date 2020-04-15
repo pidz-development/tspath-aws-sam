@@ -163,7 +163,9 @@ class ParserEngine {
         const inputSourceCode = fs.readFileSync(filename, constants_1.FILE_ENCODING);
         let ast = null;
         try {
-            ast = espree.parse(inputSourceCode); // , { raw: true, tokens: true, range: true, comment: true });
+            ast = espree.parse(inputSourceCode, {
+                ecmaVersion: 6,
+            }); // , { raw: true, tokens: true, range: true, comment: true });
         }
         catch (error) {
             console.log('Unable to parse file:', filename);
