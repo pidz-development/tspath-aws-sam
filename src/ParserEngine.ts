@@ -27,7 +27,8 @@ import * as path from 'path';
 import { Utils } from './utils';
 import { FILE_ENCODING } from './lib/constants';
 
-import * as esprima from 'esprima';
+// tslint:disable-next-line:no-var-requires
+const espree = require('espree');
 import chalk from 'chalk';
 import * as escodegen from 'escodegen';
 import { ConfigFile } from './lib/ConfigFile';
@@ -196,8 +197,7 @@ export class ParserEngine {
         let ast = null;
 
         try {
-            // @ts-ignore
-            ast = esprima.parse(inputSourceCode); // , { raw: true, tokens: true, range: true, comment: true });
+            ast = espree.parse(inputSourceCode); // , { raw: true, tokens: true, range: true, comment: true });
         } catch (error) {
             console.log('Unable to parse file:', filename);
             console.log('Error:', error);

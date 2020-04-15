@@ -4,6 +4,6 @@ const utils_1 = require("@lib/utils");
 const json_comment_stripper_1 = require("@test/json-comment-stripper");
 const project_options_1 = require("@lib/project-options");
 const type_definitions_1 = require("@src/type-definitions");
-const esprima = require("@test/esprima");
+const espree = require("@test/espree");
 const chalk_1 = require("@lib/chalk");
 const escodegen = require("@src/escodegen");
