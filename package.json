@@ -7,7 +7,7 @@
     "tspath": "NODE_ENV=dev node ./dist/index.js",
     "test": "yarn tspath --root tests",
     "watch": "tsc -w",
-    "publish:patch": "npm version patch && node scripts/buildVersionJson.js"
+    "publish:patch": "yarn build && npm version patch && node scripts/buildVersionJson.js"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
