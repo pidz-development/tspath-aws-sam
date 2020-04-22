@@ -33,6 +33,7 @@ import { ConfigFile } from './lib/ConfigFile';
 // @ts-ignore
 import { version } from './version.json';
 import { Arguments } from './lib/Arguments';
+import * as path from 'path';
 
 /**
  * TSPath main class
@@ -57,7 +58,7 @@ export class Command {
         try {
             let confPath = projectPath;
             if (args.root) {
-                confPath = projectPath + '/' + args.root;
+                confPath = projectPath + path.sep + args.root;
             }
             config = ConfigFinder.find(confPath);
             config.readContents();
